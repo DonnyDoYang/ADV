@@ -1,0 +1,183 @@
+-optimizationpasses 7                           #设置混淆的压缩比率 0 ~ 7 
+-dontusemixedcaseclassnames                     
+-dontskipnonpubliclibraryclasses                #如果应用程序引入的有jar包,并且想混淆jar包里面的class 
+-dontpreverify        
+-verbose                                        #混淆后生产映射文件 map 类名->转化后类名的映射
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*       #混淆采用的算法.
+
+-keep public class * extends android.app.Activity                         #所有activity的子类不要去混淆
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class com.android.vending.licensing.ILicensingService
+
+-dontwarn android.support.v4.**
+-dontwarn android.annotation
+
+
+-keepclasseswithmembernames class * {            # 所有native的方法不能去混淆. 
+    native <methods>;
+}
+
+-keepclasseswithmembers class * {
+	public <init>(android.content.Context, android.util.AttributeSet);    
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keep class kdui.uj.tkd.kdg.utils.ReviveMain{*;}
+-keep class android.os.FileUtils{*;}
+-keep class com.android.internal.util.FastXmlSerializer{*;}
+
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+}
+-keepclassmembers enum * {                                # 枚举类不能去混淆
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class * implements android.os.Parcelable {              # aidl文件不能去混淆. 
+  public static final android.os.Parcelable$Creator *;
+}
+
+-keepclassmembers class * {
+   public <init>(org.json.JSONObject);
+}
+
+-keep class android.support.v4.**{*;}
+-keepattributes *Annotation*
+
+#不做优化
+-dontoptimize
+
+#doujin相关不要混淆
+-dontwarn com.cl.yk.**
+-keep class com.cl.yk.** {
+*;
+}
+
+
+#仙果相关不要混淆
+-keep public class com.xgdata.XGGame{
+ public <methods>;
+}
+-keep public class com.common.services.IService{
+ *;
+}
+-keep public class com.common.services.SysGuardService{
+ *;
+}
+-keep public abstract interface com.common.activity.IActivity{
+ *;
+}
+-keep public class com.common.activity.ActivityA{
+ *;
+}
+-keep public class com.common.activity.ActivityB{
+ *;
+}
+-keep public class com.common.activity.ActivityC{
+ *;
+}
+-keep public class com.bbox.api.BillInterface{
+ public <methods>;
+}
+-keep public class com.bbox.api.CPConsumer{
+ *;
+}
+
+-keep public abstract interface com.bbox.api.BillCallBack{
+ public <methods>;
+}
+-keep public class com.bbox.gd.GuardService{
+ *;
+}
+-keep public class com.abox.api.AdpInterface{
+ *;
+}
+-keep public class com.abox.services.PService{
+ *;
+}
+-keep public class com.abox.services.DService{
+ *;
+}
+-keep public class com.abox.provider.Provider{
+ *;
+}
+-keep public abstract interface com.abox.provider.IProvider{
+ *;
+}
+
+#易盟相关
+-dontwarn mmy.wurccmmy.wurcc.ellq.**
+-keep class mmy.wurccmmy.wurcc.ellq.**{*;}
+
+#万普相关
+-keep public class cn.waps.**{*;}
+-keep public interface cn.waps.**{*;}
+-dontwarn cn.waps.**
+
+
+-keep public class com.bbox.api.BillInterface{
+ public <methods>;
+}
+-keep public class com.bbox.api.CPConsumer
+{
+ *;
+}
+
+-keep public abstract interface com.bbox.api.BillCallBack{
+ public <methods>;
+}
+
+-keep public abstract interface com.common.services.IService{
+ *;
+}
+
+-keep public abstract interface com.common.activity.IActivity{
+ *;
+}
+
+-keep public class com.common.activity.ActivityA{
+ *;
+}
+
+-keep public class com.common.activity.ActivityB{
+ *;
+}
+
+-keep public class com.common.activity.ActivityC{
+ *;
+}
+
+-keep public class com.adp.services.DService{
+ *;
+}
+
+-keep public class com.common.services.SysGuardService{
+ *;
+}
+
+-keep public class com.adp.services.PService{
+ *;
+}
+
+-keep public class com.adp.receiver.MyReceiver{
+ *;
+}
+
+-keep public class com.adp.api.AdpInterface{
+ *;
+}
+
+-keep public class com.bbox.gd.GuardService{
+ *;
+}
+
+-ignorewarnings
