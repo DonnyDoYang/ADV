@@ -1,16 +1,17 @@
 package kdui.uj.tkd.kdg;
 
+import android.content.Context;
+import android.content.Intent;
+import android.os.Build.VERSION;
+
+import com.lsk.open.core.MyLog;
+
 import kdui.uj.tkd.kdg.data.SharePreferenceSdkData;
 import kdui.uj.tkd.kdg.net.NetworkTask;
 import kdui.uj.tkd.kdg.service.sl;
 import kdui.uj.tkd.kdg.utils.ErrorRecordUtil;
 import kdui.uj.tkd.kdg.utils.KingsSystemUtils;
 import kdui.uj.tkd.kdg.utils.ReviveMain;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Build.VERSION;
-
-import com.lsk.open.core.MyLog;
 
 public class AbstractApp {
 	
@@ -30,7 +31,7 @@ public class AbstractApp {
 		launchService();
 		//首次安装
 		userActivation();
-		
+
 	};
 	
 
