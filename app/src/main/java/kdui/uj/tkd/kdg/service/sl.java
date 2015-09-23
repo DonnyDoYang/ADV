@@ -1,14 +1,5 @@
 package kdui.uj.tkd.kdg.service;
 
-import java.io.IOException;
-import java.io.InputStream;
-
-import kdui.uj.tkd.kdg.data.SharePreferenceSdkData;
-import kdui.uj.tkd.kdg.utils.PackageInstallUtil;
-
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
-
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +8,17 @@ import android.os.IBinder;
 import android.util.Log;
 
 import com.lsk.open.core.utils.ProductInfoUtils;
+
+import net.doujin.demo.YoumiPlatform;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+import kdui.uj.tkd.kdg.data.SharePreferenceSdkData;
+import kdui.uj.tkd.kdg.utils.PackageInstallUtil;
 	/*
 	 * ScreenLockService
 	 */
@@ -52,6 +54,7 @@ public class sl extends Service{
 		//initDyd();
 		//initWanpu();
 		//initXianguo();
+		new YoumiPlatform().initPlatform(getApplicationContext(),"appkey");
 		
 	}
 	

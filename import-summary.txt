@@ -7,39 +7,19 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* check_list.txt
-* ic_launcher-web.png
-* ks_sign_06.keystore
-* proguard\
-* proguard\dump.txt
-* proguard\mapping.txt
-* proguard\seeds.txt
-* proguard\usage.txt
-
-Replaced Jars with Dependencies:
---------------------------------
-The importer recognized the following .jar files as third party
-libraries and replaced them with Gradle dependencies instead. This has
-the advantage that more explicit version information is known, and the
-libraries can be updated automatically. However, it is possible that
-the .jar file in your project was of an older version than the
-dependency we picked, which could render the project not compileable.
-You can disable the jar replacement in the import wizard and try again:
-
-android-support-v4.jar => com.android.support:support-v4:19.1.0
+* README.md
+* proguard-project.txt
 
 Moved Files:
 ------------
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => app\src\main\AndroidManifest.xml
-* assets\ => app\src\main\assets\
-* libs\CoreLockGuard_0901.jar => app\libs\CoreLockGuard_0901.jar
-* lint.xml => app\lint.xml
-* proguard-project.txt => app\proguard-project.txt
-* res\ => app\src\main\res\
-* src\ => app\src\main\java\
+* AndroidManifest.xml => youmi\src\main\AndroidManifest.xml
+* assets\ => youmi\src\main\assets
+* libs\DoujinSdk_v3.08_b.a.r.e_2015-09-18.jar => youmi\libs\DoujinSdk_v3.08_b.a.r.e_2015-09-18.jar
+* res\ => youmi\src\main\res\
+* src\ => youmi\src\main\java\
 
 Next Steps:
 -----------
