@@ -7,5 +7,5 @@ import android.content.Context;
  */
 public interface PlatformInterface {
 
-    void initPlatform(Context context, String appkey);
+    void initPlatform(Context context, DownloadCallback callback,String ...appkey);
 }

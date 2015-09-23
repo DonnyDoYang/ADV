@@ -21,4 +21,5 @@ android {
 dependencies {
     compile 'com.android.support:support-v4:20.+'
     compile files('libs/CoreLockGuard_0901.jar')
+    compile project(':common')
 }
