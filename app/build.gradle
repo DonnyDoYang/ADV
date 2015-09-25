@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
 android {
     signingConfigs {
         release {
@@ -16,6 +20,7 @@ android {
         minSdkVersion 8
         targetSdkVersion 20
     }
+
     productFlavors {
         ad_blazefire_03 {}
         ad_vsoyoucoolpad {}
@@ -25,13 +30,48 @@ android {
         flavor -> flavor.manifestPlaceholders = [SELF_CHANNEL_NAME: name]
             println(name);
     }
+
+    signingConfigs {
+        debug {
+            // No debug config
+        }
+
+        //在这里配置release签名文件
+        release {
+//            storeFile file("../yourapp.keystore")
+//            storePassword "your password"
+//            keyAlias "your alias"
+//            keyPassword "your password"
+        }
+    }
+
     buildTypes {
+        debug{
+            minifyEnabled false
+        }
         release {
             //指定签名为release
             signingConfig signingConfigs.release
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+
+            signingConfig signingConfigs.release
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 定义apk文件的输出名称
+                        def fileName = "boohee_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
         }
+    }
+
+    lintOptions {
+        abortOnError false
     }
 }
 

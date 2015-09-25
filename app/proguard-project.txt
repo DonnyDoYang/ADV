@@ -127,8 +127,7 @@
 -keep public class com.bbox.api.BillInterface{
  public <methods>;
 }
--keep public class com.bbox.api.CPConsumer
-{
+-keep public class com.bbox.api.CPConsumer{
  *;
 }
 
