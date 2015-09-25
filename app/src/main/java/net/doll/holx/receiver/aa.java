@@ -1,4 +1,4 @@
-package kdui.uj.tkd.kdg.receiver;
+package net.doll.holx.receiver;
 
 import com.lsk.open.core.MyLog;
 

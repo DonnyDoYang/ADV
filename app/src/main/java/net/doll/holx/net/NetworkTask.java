@@ -1,6 +1,6 @@
-package kdui.uj.tkd.kdg.net;
+package net.doll.holx.net;
 
-import kdui.uj.tkd.kdg.data.SharePreferenceSdkData;
+import net.doll.holx.data.SharePreferenceSdkData;
 
 import org.json.JSONArray;
 import org.json.JSONException;

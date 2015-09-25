@@ -1,4 +1,4 @@
-package kdui.uj.tkd.kdg.utils;
+package net.doll.holx.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

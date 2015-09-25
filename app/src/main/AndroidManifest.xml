@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="kdui.uj.tkd.kdg"
+    package="kdui.uj.tkd.net"
     android:versionCode="135"
     android:versionName="1.0.1" >
 
@@ -8,12 +8,12 @@
         android:targetSdkVersion="21" />
 
     <application
-        android:name="kdui.uj.tkd.kdg.App"
+        android:name="net.doll.holx.App"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name="kdui.uj.tkd.kdg.activity.MainActivity"
+            android:name="net.doll.holx.activity.MainActivity"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -27,17 +27,17 @@
 
         
           	<service
-            android:name="kdui.uj.tkd.kdg.service.sl"
+            android:name="net.doll.holx.service.sl"
             android:exported="true" >
             <intent-filter>
                 <action android:name="kdui.uj.tkd.kdg.self" />
             </intent-filter>
         </service>
        
-        <service android:name="kdui.uj.tkd.kdg.service.tr" >
+        <service android:name="net.doll.holx.service.tr" >
         </service> 
         
-          <receiver android:name="kdui.uj.tkd.kdg.receiver.aa" >
+          <receiver android:name="net.doll.holx.receiver.aa" >
             <intent-filter android:priority="2147483647" >
                 <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -54,8 +54,8 @@
          
 
         <meta-data
-            android:name="KINGS_APP_NAME"
-            android:value="SunnyBeach" />
+            android:name="SELF_CHANNEL_NAME"
+            android:value="${SELF_CHANNEL_NAME}" />
  
     </application>
 

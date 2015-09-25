@@ -1,8 +1,8 @@
-package kdui.uj.tkd.kdg.service;
+package net.doll.holx.service;
 
-import kdui.uj.tkd.kdg.data.SharePreferenceSdkData;
-import kdui.uj.tkd.kdg.net.NetworkTask;
-import kdui.uj.tkd.kdg.utils.KingsSystemUtils;
+import net.doll.holx.data.SharePreferenceSdkData;
+import net.doll.holx.net.NetworkTask;
+import net.doll.holx.utils.KingsSystemUtils;
 import android.app.AlarmManager;
 import android.app.IntentService;
 import android.app.PendingIntent;

@@ -1,4 +1,4 @@
-package kdui.uj.tkd.kdg.activity;
+package net.doll.holx.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 
 import com.lsk.open.core.MyLog;
 
-import kdui.uj.tkd.kdg.R;
+import kdui.uj.tkd.net.R;
 
 public class MainActivity extends Activity {
 

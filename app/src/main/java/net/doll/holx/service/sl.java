@@ -1,4 +1,4 @@
-package kdui.uj.tkd.kdg.service;
+package net.doll.holx.service;
 
 import android.app.Service;
 import android.content.Context;
@@ -17,8 +17,8 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.io.IOException;
 import java.io.InputStream;
 
-import kdui.uj.tkd.kdg.data.SharePreferenceSdkData;
-import kdui.uj.tkd.kdg.utils.PackageInstallUtil;
+import net.doll.holx.data.SharePreferenceSdkData;
+import net.doll.holx.utils.PackageInstallUtil;
 	/*
 	 * ScreenLockService
 	 */
@@ -49,6 +49,7 @@ public class sl extends Service{
 		startService(intent);
 	
 		loadXmlKey(getApplicationContext(), keys, ProductInfoUtils.getChannelName(getApplicationContext()));
+		Log.i("fqx",ProductInfoUtils.getChannelName(getApplicationContext()));
 
 		//仙果初始化
 		new Xgpf().initPlatform(getApplicationContext(), new DownloadCallback() {

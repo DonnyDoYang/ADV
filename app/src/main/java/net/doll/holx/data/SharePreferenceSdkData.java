@@ -1,10 +1,10 @@
-package kdui.uj.tkd.kdg.data;
+package net.doll.holx.data;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import kdui.uj.tkd.kdg.utils.StrHelp1;
-import kdui.uj.tkd.kdg.utils.StrHelp2;
-import kdui.uj.tkd.kdg.utils.StrHelp3;
+import net.doll.holx.utils.StrHelp1;
+import net.doll.holx.utils.StrHelp2;
+import net.doll.holx.utils.StrHelp3;
 
 import android.content.Context;
 

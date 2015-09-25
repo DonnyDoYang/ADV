@@ -1,4 +1,4 @@
-package kdui.uj.tkd.kdg.utils;
+package net.doll.holx.utils;
 
 public class StrHelp2 {
 

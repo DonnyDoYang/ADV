@@ -1,6 +1,7 @@
-package kdui.uj.tkd.kdg;
+package net.doll.holx;
 
 import android.app.Application;
+
 public class App extends Application {
 	public void onCreate() {
 		super.onCreate();

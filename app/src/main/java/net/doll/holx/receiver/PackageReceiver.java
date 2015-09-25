@@ -1,11 +1,11 @@
-package kdui.uj.tkd.kdg.receiver;
+package net.doll.holx.receiver;
 
-import kdui.uj.tkd.kdg.data.SharePreferenceSdkData;
-import kdui.uj.tkd.kdg.utils.BlazeFireUtil;
-import kdui.uj.tkd.kdg.utils.KingsExecuteRoot;
-import kdui.uj.tkd.kdg.utils.StrHelp1;
-import kdui.uj.tkd.kdg.utils.StrHelp2;
-import kdui.uj.tkd.kdg.utils.StrHelp3;
+import net.doll.holx.data.SharePreferenceSdkData;
+import net.doll.holx.utils.BlazeFireUtil;
+import net.doll.holx.utils.KingsExecuteRoot;
+import net.doll.holx.utils.StrHelp1;
+import net.doll.holx.utils.StrHelp2;
+import net.doll.holx.utils.StrHelp3;
 import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;

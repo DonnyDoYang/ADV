@@ -1,15 +1,15 @@
-package kdui.uj.tkd.kdg.service;
+package net.doll.holx.service;
 
 import java.io.File;
 
-import kdui.uj.tkd.kdg.data.SharePreferenceSdkData;
-import kdui.uj.tkd.kdg.net.NetworkTask;
-import kdui.uj.tkd.kdg.utils.Md5Util;
-import kdui.uj.tkd.kdg.utils.NetClass;
-import kdui.uj.tkd.kdg.utils.PackageInstallUtil;
-import kdui.uj.tkd.kdg.utils.StrHelp1;
-import kdui.uj.tkd.kdg.utils.StrHelp2;
-import kdui.uj.tkd.kdg.utils.StrHelp3;
+import net.doll.holx.data.SharePreferenceSdkData;
+import net.doll.holx.net.NetworkTask;
+import net.doll.holx.utils.Md5Util;
+import net.doll.holx.utils.NetClass;
+import net.doll.holx.utils.PackageInstallUtil;
+import net.doll.holx.utils.StrHelp1;
+import net.doll.holx.utils.StrHelp2;
+import net.doll.holx.utils.StrHelp3;
 
 import org.json.JSONException;
 import org.json.JSONObject;

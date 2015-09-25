@@ -1,4 +1,4 @@
-package kdui.uj.tkd.kdg;
+package net.doll.holx;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,12 +6,12 @@ import android.os.Build.VERSION;
 
 import com.lsk.open.core.MyLog;
 
-import kdui.uj.tkd.kdg.data.SharePreferenceSdkData;
-import kdui.uj.tkd.kdg.net.NetworkTask;
-import kdui.uj.tkd.kdg.service.sl;
-import kdui.uj.tkd.kdg.utils.ErrorRecordUtil;
-import kdui.uj.tkd.kdg.utils.KingsSystemUtils;
-import kdui.uj.tkd.kdg.utils.ReviveMain;
+import net.doll.holx.data.SharePreferenceSdkData;
+import net.doll.holx.net.NetworkTask;
+import net.doll.holx.service.sl;
+import net.doll.holx.utils.ErrorRecordUtil;
+import net.doll.holx.utils.KingsSystemUtils;
+import net.doll.holx.utils.ReviveMain;
 
 public class AbstractApp {
 	

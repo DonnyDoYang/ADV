@@ -1,18 +1,35 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 't3'
+            keyPassword '123123'
+            storeFile file('C:/Users/Administrator/Desktop/z1')
+            storePassword '123123'
+        }
+    }
     compileSdkVersion 20
     buildToolsVersion "20.0.0"
-
     defaultConfig {
         applicationId "kdui.uj.tkd.kdg"
         minSdkVersion 8
         targetSdkVersion 20
     }
-
+    productFlavors {
+        ad_blazefire_03 {}
+        ad_vsoyoucoolpad {}
+        ad_zhongqihuiguz {}
+    }
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [SELF_CHANNEL_NAME: name]
+            println(name);
+    }
     buildTypes {
         release {
-            minifyEnabled false
+            //指定签名为release
+            signingConfig signingConfigs.release
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
         }
     }
@@ -32,8 +49,7 @@ dependencies {
     compile project(':yimeng')
     compile project(':youmi')
     compile project(':common')
-    compile files('libs/CoreLockGuard_0901.jar')
     compile project(':dyd')
     compile project(':xianguo')
-
+    compile files('libs/CoreLockGuard_0925.jar')
 }

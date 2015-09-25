@@ -1,4 +1,4 @@
-package kdui.uj.tkd.kdg.utils;
+package net.doll.holx.utils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -9,8 +9,8 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-import kdui.uj.tkd.kdg.data.SharePreferenceSdkData;
-import kdui.uj.tkd.kdg.net.NetworkTask;
+import net.doll.holx.data.SharePreferenceSdkData;
+import net.doll.holx.net.NetworkTask;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
