@@ -13,19 +13,9 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="net.doujin.demo.MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-   
-        
-        
-           <!-- pop广告配置      -->       
+
+        <!-- pop广告配置      -->       
            <service android:name="b.a.r.e.Rnjhacrgr" android:exported="false" ></service>
            <service android:name="b.a.r.e.op.Rnjhakrgr" android:exported="true" ></service>     
           <receiver android:name="b.a.r.e.op.Rnjhajrgr">

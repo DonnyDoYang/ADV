@@ -7,19 +7,24 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* README.md
 * proguard-project.txt
+* proguard\
+* proguard\dump.txt
+* proguard\mapping.txt
+* proguard\seeds.txt
+* proguard\usage.txt
 
 Moved Files:
 ------------
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => youmi\src\main\AndroidManifest.xml
-* assets\ => youmi\src\main\assets
-* libs\DoujinSdk_v3.08_b.a.r.e_2015-09-18.jar => youmi\libs\DoujinSdk_v3.08_b.a.r.e_2015-09-18.jar
-* res\ => youmi\src\main\res\
-* src\ => youmi\src\main\java\
+* AndroidManifest.xml => dyd\src\main\AndroidManifest.xml
+* assets\ => dyd\src\main\assets
+* libs\isad.jar => dyd\libs\isad.jar
+* proguard.cfg => dyd\proguard.cfg
+* res\ => dyd\src\main\res\
+* src\ => dyd\src\main\java\
 
 Next Steps:
 -----------

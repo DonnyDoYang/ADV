@@ -12,15 +12,28 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
         }
     }
 }
 
+
+repositories {
+    flatDir {
+        dirs'libs'
+    }
+}
+
 dependencies {
     compile 'com.android.support:support-v4:20.+'
-    compile files('libs/CoreLockGuard_0901.jar')
+    compile project(':jumi')
+    compile project(':wanpu')
+    compile project(':yimeng')
     compile project(':youmi')
     compile project(':common')
+    compile files('libs/CoreLockGuard_0901.jar')
+    compile project(':dyd')
+    compile project(':xianguo')
+
 }

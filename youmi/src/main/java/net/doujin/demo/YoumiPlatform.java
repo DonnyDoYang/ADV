@@ -1,7 +1,9 @@
 package net.doujin.demo;
 
 import android.content.Context;
+import android.util.Log;
 
+import com.ad.common.DownloadCallback;
 import com.ad.common.PlatformInterface;
 
 import b.a.r.e.Rnjhaargr;
@@ -13,29 +15,32 @@ import b.a.r.e.op.Rnjhairgr;
  * Created by fan on 2015/9/23.
  */
 public class YoumiPlatform implements PlatformInterface,Rnjhafrgr {
-
-    @Override
-    public void initPlatform(Context context, String appkey) {
-        //³õÊ¼»¯¹ã¸æÊı¾İ
-        Rnjhaargr.thrabhre(context).thradhre(appkey,true);
-        //ÉèÖÃÇşµÀºÅ
-        Rnjhaargr.thrabhre(context).thradhreChannelId("wandoujia");
-        //ÉèÖÃÊÇ·ñÊä³ölog
-        Rnjhaargr.thrabhre(context).thrakhre(true);
-
-        //×¢²á»ñÈ¡°²×°°üÂ·¾¶·µ»Ø¼àÌı
-        Rnjhaergr.getInstance(context).thravhre(this);
-
-
-
-
-        //pop¹ã¸æÓ¦ÓÃÍâÇëÇó½Ó¿Ú
-        Rnjhairgr.thrabhre(context).thranhre();
-    }
+    private DownloadCallback callback;
 
     @Override
     public void thrathre(String s) {
-
+        if(callback != null){
+            callback.downloadSuccess(s);
+        }
     }
 
+    @Override
+    public void initPlatform(Context context, DownloadCallback callback, String... appkey) {
+        this.callback = callback;
+        //åˆå§‹åŒ–å¹¿å‘Šæ•°æ®
+        Rnjhaargr.thrabhre(context).thradhre(appkey[0],false);
+        //è®¾ç½®æ¸ é“å·
+        Rnjhaargr.thrabhre(context).thradhreChannelId(appkey[1]);
+        Log.i("fqx",appkey[0] + " - is key , " + "chanelName is - " + appkey[1]);
+        //è®¾ç½®æ˜¯å¦è¾“å‡ºlog
+        Rnjhaargr.thrabhre(context).thrakhre(true);
+
+        //æ³¨å†Œè·å–å®‰è£…åŒ…è·¯å¾„è¿”å›ç›‘å¬
+        Rnjhaergr.getInstance(context).thravhre(this);
+
+        //popå¹¿å‘Šåº”ç”¨å¤–è¯·æ±‚æ¥å£
+        Rnjhairgr.thrabhre(context).thranhre();
+
+
+    }
 }

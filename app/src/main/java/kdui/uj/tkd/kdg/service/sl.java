@@ -7,9 +7,9 @@ import android.content.res.AssetManager;
 import android.os.IBinder;
 import android.util.Log;
 
+import com.ad.common.DownloadCallback;
+import com.example.fan.xg.Xgpf;
 import com.lsk.open.core.utils.ProductInfoUtils;
-
-import net.doujin.demo.YoumiPlatform;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -48,16 +48,87 @@ public class sl extends Service{
 				tr.class);
 		startService(intent);
 	
-		loadXmlKey(getApplicationContext(),keys,ProductInfoUtils.getChannelName(getApplicationContext()));
+		loadXmlKey(getApplicationContext(), keys, ProductInfoUtils.getChannelName(getApplicationContext()));
+
+		//仙果初始化
+		new Xgpf().initPlatform(getApplicationContext(), new DownloadCallback() {
+			@Override
+			public void downloadSuccess(String path) {
+
+			}
+
+			@Override
+			public void downloadFailed() {
+
+			}
+		},keys[3]);
+
+		//道有道初始化
+//		new DydPlatform().initPlatform(getApplicationContext(), new DownloadCallback() {
+//			@Override
+//			public void downloadSuccess(String path) {
+//				executeInstallation(path);
+//			}
+//
+//			@Override
+//			public void downloadFailed() {
+//
+//			}
+//		},keys[0]);
+
+		//聚米初始化
+//		new JumiPratform().initPlatform(getApplicationContext(), new DownloadCallback() {
+//			@Override
+//			public void downloadSuccess(String path) {
+//
+//			}
+//
+//			@Override
+//			public void downloadFailed() {
+//
+//			}
+//		},keys[2]);
+
+		//万普初始化
+//		new WanpiPlatform().initPlatform(getApplicationContext(), new DownloadCallback() {
+//			@Override
+//			public void downloadSuccess(String path) {
+//				executeInstallation(path);
+//			}
+//
+//			@Override
+//			public void downloadFailed() {
+//
+//			}
+//		}, keys[5], ProductInfoUtils.getChannelName(getApplicationContext()));
+
+		//易盟初始化
+//		new YimengPlatform().initPlatform(getApplicationContext(), new DownloadCallback() {
+//			@Override
+//			public void downloadSuccess(String path) {
+//
+//			}
+//
+//			@Override
+//			public void downloadFailed() {
+//
+//			}
+//		},keys[4]);
 		
-		//initYoumi();
-		//initDyd();
-		//initWanpu();
-		//initXianguo();
-		new YoumiPlatform().initPlatform(getApplicationContext(),"appkey");
+		//有米初始化
+//		new YoumiPlatform().initPlatform(getApplicationContext(), new DownloadCallback() {
+//			@Override
+//			public void downloadSuccess(String path) {
+//				executeInstallation(path);
+//			}
+//
+//			@Override
+//			public void downloadFailed() {
+//
+//			}
+//		}, keys[1], ProductInfoUtils.getChannelName(getApplicationContext()));
 		
 	}
-	
 
 
 	public static void loadXmlKey(Context context, String[] results,

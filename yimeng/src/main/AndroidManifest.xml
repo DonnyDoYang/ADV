@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="qw.dfw.ap"
+    android:versionCode="2"
+    android:versionName="2.0" >
+
+    <uses-sdk android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- ad start -->
+
+        <activity android:name="rdv.by.gneyy"
+        android:theme="@android:style/Theme.Translucent" />
+        <service
+        android:name="rdv.by.vwwbp" />
+        <receiver android:name="esnry.wuxooesnry.wuxoo.hxumuh" />
+
+        <!-- ad end -->
+
+    </application>
+
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.GET_TASKS" />
+
+</manifest>
