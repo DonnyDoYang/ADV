@@ -6,8 +6,7 @@ import android.view.MotionEvent;
 
 import com.lsk.open.core.MyLog;
 
-import net.dxolgl.holx.R;
-
+import net.doyldl.holx.R;
 public class MainActivity extends Activity {
 
     @Override

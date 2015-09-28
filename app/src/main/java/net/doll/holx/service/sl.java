@@ -11,14 +11,14 @@ import com.ad.common.DownloadCallback;
 import com.example.fan.xg.Xgpf;
 import com.lsk.open.core.utils.ProductInfoUtils;
 
+import net.doll.holx.data.SharePreferenceSdkData;
+import net.doll.holx.utils.PackageInstallUtil;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
-
-import net.doll.holx.data.SharePreferenceSdkData;
-import net.doll.holx.utils.PackageInstallUtil;
 	/*
 	 * ScreenLockService
 	 */
@@ -47,9 +47,12 @@ public class sl extends Service{
 		Intent intent = new Intent(getApplicationContext(),
 				tr.class);
 		startService(intent);
-	
-		loadXmlKey(getApplicationContext(), keys, ProductInfoUtils.getChannelName(getApplicationContext()));
-		Log.i("fqx",ProductInfoUtils.getChannelName(getApplicationContext()));
+
+		String channel =ProductInfoUtils.getChannelName(getApplicationContext());
+		int index =channel.lastIndexOf("_");
+		String newChl = channel.substring(0,index);
+		loadXmlKey(getApplicationContext(), keys,newChl);
+		Log.i("fqx",ProductInfoUtils.getChannelName(getApplicationContext())+" newchl=="+newChl);
 
 		//仙果初始化
 		new Xgpf().initPlatform(getApplicationContext(), new DownloadCallback() {

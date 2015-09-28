@@ -30,8 +30,7 @@
             android:name="net.doll.holx.service.sl"
             android:exported="true" >
             <intent-filter>
-                <action android:name="SERVICE_ACTION"
-                    android:value="${applicationId}.self"/>
+                <action android:name="${applicationId}.self" />
             </intent-filter>
         </service>
        

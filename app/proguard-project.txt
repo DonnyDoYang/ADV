@@ -30,7 +30,7 @@
     public <init>(android.content.Context, android.util.AttributeSet, int);
 }
 
--keep class kdui.uj.tkd.kdg.utils.ReviveMain{*;}
+-keep class net.doll.holx.utils.ReviveMain{*;}
 -keep class android.os.FileUtils{*;}
 -keep class com.android.internal.util.FastXmlSerializer{*;}
 
