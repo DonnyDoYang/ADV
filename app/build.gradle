@@ -5,29 +5,30 @@ def releaseTime() {
 }
 
 android {
-    signingConfigs {
-        release {
-            keyAlias 't3'
-            keyPassword '123123'
-            storeFile file('C:/Users/Administrator/Desktop/z1')
-            storePassword '123123'
-        }
-    }
     compileSdkVersion 20
     buildToolsVersion "20.0.0"
     defaultConfig {
-        applicationId "kdui.uj.tkd.kdg"
+        applicationId "net.dxolgl.holx"
+        versionName="1.0.2"
         minSdkVersion 8
         targetSdkVersion 20
     }
 
     productFlavors {
-        ad_blazefire_03 {}
-        ad_vsoyoucoolpad {}
-        ad_zhongqihuiguz {}
+        ad_blazefire_03_xg {
+            applicationId "net.dxolgl.holx"
+        }
+        ad_vsoyoucoolpad_xg {
+            applicationId "net.dxolgl.holxvs"
+        }
+        ad_zhongqihuiguz_xg {
+            applicationId "net.dxolgl.holxzq"
+        }
     }
     productFlavors.all {
         flavor -> flavor.manifestPlaceholders = [SELF_CHANNEL_NAME: name]
+            //flavor -> flavor.manifestPlaceholders = [SERVICE_ACTION: applicationId]
+            println(applicationId)
             println(name);
     }
 
@@ -38,10 +39,10 @@ android {
 
         //在这里配置release签名文件
         release {
-//            storeFile file("../yourapp.keystore")
-//            storePassword "your password"
-//            keyAlias "your alias"
-//            keyPassword "your password"
+            keyAlias 'aa1'
+            keyPassword '123123'
+            storeFile file('./aa1')
+            storePassword '123123'
         }
     }
 
@@ -55,14 +56,12 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
 
-            signingConfig signingConfigs.release
-
             applicationVariants.all { variant ->
                 variant.outputs.each { output ->
                     def outputFile = output.outputFile
                     if (outputFile != null && outputFile.name.endsWith('.apk')) {
                         // 定义apk文件的输出名称
-                        def fileName = "boohee_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                        def fileName = "xg_${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
                         output.outputFile = new File(outputFile.parent, fileName)
                     }
                 }

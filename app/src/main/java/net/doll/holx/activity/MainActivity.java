@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 
 import com.lsk.open.core.MyLog;
 
-import kdui.uj.tkd.net.R;
+import net.dxolgl.holx.R;
 
 public class MainActivity extends Activity {
 

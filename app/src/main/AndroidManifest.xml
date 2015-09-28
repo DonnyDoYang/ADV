@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="kdui.uj.tkd.net"
-    android:versionCode="135"
-    android:versionName="1.0.1" >
+    package="net.dxolgl.holx"
+    android:versionCode="136"
+    android:versionName="1.0.2" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -30,7 +30,8 @@
             android:name="net.doll.holx.service.sl"
             android:exported="true" >
             <intent-filter>
-                <action android:name="kdui.uj.tkd.kdg.self" />
+                <action android:name="SERVICE_ACTION"
+                    android:value="${applicationId}.self"/>
             </intent-filter>
         </service>
        
