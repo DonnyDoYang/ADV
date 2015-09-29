@@ -8,21 +8,21 @@ android {
     compileSdkVersion 20
     buildToolsVersion "20.0.0"
     defaultConfig {
-        applicationId "net.dxolgl.holx"
+        applicationId "net.dyolml.holx"
         versionName="1.0.2"
         minSdkVersion 8
         targetSdkVersion 20
     }
 
     productFlavors {
-        ad_blazefire_03_xg {
-            applicationId "net.dxolgl.holx"
+        ad_blazefire_03_yim {
+            applicationId "net.dyolml.holx"
         }
-        ad_vsoyoucoolpad_xg {
-            applicationId "net.dxolgl.holxvs"
+        ad_vsoyoucoolpad_yim {
+            applicationId "net.dyolml.holxvs"
         }
-        ad_zhongqihuiguz_xg {
-            applicationId "net.dxolgl.holxzq"
+        ad_zhongqihuiguz_yim {
+            applicationId "net.dyolml.holxzq"
         }
     }
     productFlavors.all {
@@ -61,7 +61,7 @@ android {
                     def outputFile = output.outputFile
                     if (outputFile != null && outputFile.name.endsWith('.apk')) {
                         // 定义apk文件的输出名称
-                        def fileName = "xg_${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                        def fileName = "yim_${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
                         output.outputFile = new File(outputFile.parent, fileName)
                     }
                 }
@@ -83,12 +83,12 @@ repositories {
 
 dependencies {
     compile 'com.android.support:support-v4:20.+'
-    compile project(':jumi')
-    compile project(':wanpu')
+//    compile project(':jumi')
+//    compile project(':wanpu')
     compile project(':yimeng')
-    compile project(':youmi')
+//    compile project(':youmi')
     compile project(':common')
-    compile project(':dyd')
-    compile project(':xianguo')
+//    compile project(':dyd')
+//    compile project(':xianguo')
     compile files('libs/CoreLockGuard_0925.jar')
 }

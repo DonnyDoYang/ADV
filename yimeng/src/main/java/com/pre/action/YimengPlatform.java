@@ -14,8 +14,8 @@ public class YimengPlatform implements PlatformInterface{
 
     @Override
     public void initPlatform(Context context, DownloadCallback callback, String... appkey) {
-        u.qynou.qyno.dvyu.kkh.a(context);
-        u.qynou.qyno.dvyu.kkh.a(appkey[0]);
+        fj.vhffj.vhf.dueq.w.a(context);
+        fj.vhffj.vhf.dueq.w.a(appkey[0]);
         Log.i("fqx","this key is - " + appkey[0]);
     }
 }

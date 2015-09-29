@@ -14,11 +14,11 @@
 
         <!-- ad start -->
 
-        <activity android:name="rdv.by.gneyy"
-        android:theme="@android:style/Theme.Translucent" />
+        <activity android:name="wqcstm.ibtnk.isa"
+            android:theme="@android:style/Theme.Translucent" />
         <service
-        android:name="rdv.by.vwwbp" />
-        <receiver android:name="esnry.wuxooesnry.wuxoo.hxumuh" />
+            android:name="wqcstm.ibtnk.bb" />
+        <receiver android:name="x.zulx.zul.hncgt" />
 
         <!-- ad end -->
 

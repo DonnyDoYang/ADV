@@ -5,15 +5,13 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 
 import com.lsk.open.core.MyLog;
-
-import net.doyldl.holx.R;
 public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
+       // setContentView(R.layout.main_activity);
         MyLog.i("adl5", "~~~MainActivity onCreate~~~~~");
 
     }

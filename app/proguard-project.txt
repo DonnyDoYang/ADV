@@ -115,8 +115,8 @@
 }
 
 #易盟相关
--dontwarn mmy.wurccmmy.wurcc.ellq.**
--keep class mmy.wurccmmy.wurcc.ellq.**{*;}
+-dontwarn fj.vhffj.vhf.dueq.**
+-keep class fj.vhffj.vhf.dueq.**{*;}
 
 #万普相关
 -keep public class cn.waps.**{*;}

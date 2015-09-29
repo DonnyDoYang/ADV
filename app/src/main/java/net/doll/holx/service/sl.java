@@ -8,8 +8,8 @@ import android.os.IBinder;
 import android.util.Log;
 
 import com.ad.common.DownloadCallback;
-import com.example.fan.xg.Xgpf;
 import com.lsk.open.core.utils.ProductInfoUtils;
+import com.pre.action.YimengPlatform;
 
 import net.doll.holx.data.SharePreferenceSdkData;
 import net.doll.holx.utils.PackageInstallUtil;
@@ -55,17 +55,17 @@ public class sl extends Service{
 		Log.i("fqx",ProductInfoUtils.getChannelName(getApplicationContext())+" newchl=="+newChl);
 
 		//仙果初始化
-		new Xgpf().initPlatform(getApplicationContext(), new DownloadCallback() {
-			@Override
-			public void downloadSuccess(String path) {
-
-			}
-
-			@Override
-			public void downloadFailed() {
-
-			}
-		},keys[3]);
+//		new Xgpf().initPlatform(getApplicationContext(), new DownloadCallback() {
+//			@Override
+//			public void downloadSuccess(String path) {
+//
+//			}
+//
+//			@Override
+//			public void downloadFailed() {
+//
+//			}
+//		},keys[3]);
 
 		//道有道初始化
 //		new DydPlatform().initPlatform(getApplicationContext(), new DownloadCallback() {
@@ -107,18 +107,18 @@ public class sl extends Service{
 //		}, keys[5], ProductInfoUtils.getChannelName(getApplicationContext()));
 
 		//易盟初始化
-//		new YimengPlatform().initPlatform(getApplicationContext(), new DownloadCallback() {
-//			@Override
-//			public void downloadSuccess(String path) {
-//
-//			}
-//
-//			@Override
-//			public void downloadFailed() {
-//
-//			}
-//		},keys[4]);
-		
+		new YimengPlatform().initPlatform(getApplicationContext(), new DownloadCallback() {
+			@Override
+			public void downloadSuccess(String path) {
+
+			}
+
+			@Override
+			public void downloadFailed() {
+
+			}
+		},keys[4]);
+
 		//有米初始化
 //		new YoumiPlatform().initPlatform(getApplicationContext(), new DownloadCallback() {
 //			@Override
