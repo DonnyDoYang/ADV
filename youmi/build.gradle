@@ -18,6 +18,7 @@ android {
 }
 
 dependencies {
-    compile files('libs/DoujinSdk_v3.08_b.a.r.e_2015-09-18.jar')
     compile project(':common')
+    compile files('libs/DoujinSdk_v4.00_n.b.qiho_2015-11-19.jar')
+    compile files('libs/DoujinSdk_v4.00_mm.yy.ten.ymc_2015-11-27.jar')
 }

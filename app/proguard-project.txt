@@ -18,6 +18,12 @@
 -dontwarn android.annotation
 
 
+-keepclassmembers class * {                       # 混淆umeng
+   public <init>(org.json.JSONObject);
+}
+-keep public class [net.miylid.zq].R$*{
+public static final int *;
+}
 -keepclasseswithmembernames class * {            # 所有native的方法不能去混淆. 
     native <methods>;
 }
@@ -30,7 +36,7 @@
     public <init>(android.content.Context, android.util.AttributeSet, int);
 }
 
--keep class net.doll.holx.utils.ReviveMain{*;}
+#-keep class data.mild.mynu.utils.ReviveMain{*;}
 -keep class android.os.FileUtils{*;}
 -keep class com.android.internal.util.FastXmlSerializer{*;}
 

@@ -8,26 +8,27 @@ android {
     compileSdkVersion 20
     buildToolsVersion "20.0.0"
     defaultConfig {
-        applicationId "net.dyolml.holx"
-        versionName="1.0.2"
+        applicationId "data.dylid.mydy"
+        versionName="1.0.0"
         minSdkVersion 8
         targetSdkVersion 20
     }
 
     productFlavors {
-        ad_blazefire_03_yim {
-            applicationId "net.dyolml.holx"
+        ad_zhongqihuiguz_jumi {
+            applicationId "zq.jumiylid.dy"
         }
+
+        ad_zhongqihuiguz_youmi {
+            applicationId "sys.mewlid.zq"
+        }
+
         ad_vsoyoucoolpad_yim {
-            applicationId "net.dyolml.holxvs"
-        }
-        ad_zhongqihuiguz_yim {
-            applicationId "net.dyolml.holxzq"
+            applicationId "data.miylid.mynuvs"
         }
     }
     productFlavors.all {
         flavor -> flavor.manifestPlaceholders = [SELF_CHANNEL_NAME: name]
-            //flavor -> flavor.manifestPlaceholders = [SERVICE_ACTION: applicationId]
             println(applicationId)
             println(name);
     }
@@ -38,11 +39,23 @@ android {
         }
 
         //在这里配置release签名文件
+//        release {
+//            keyAlias 'zqyoumi11'
+//            keyPassword '368868'
+//            storeFile file('./youmi_key')
+//            storePassword '368868'
+//        }
+//        release {
+//            keyAlias 'zqyoumi22'
+//            keyPassword '368868'
+//            storeFile file('./jumi_key')
+//            storePassword '368868'
+//        }
         release {
-            keyAlias 'aa1'
-            keyPassword '123123'
-            storeFile file('./aa1')
-            storePassword '123123'
+            keyAlias 'zq1'
+            keyPassword '368868'
+            storeFile file('./new_key')
+            storePassword '368868'
         }
     }
 
@@ -61,7 +74,7 @@ android {
                     def outputFile = output.outputFile
                     if (outputFile != null && outputFile.name.endsWith('.apk')) {
                         // 定义apk文件的输出名称
-                        def fileName = "yim_${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                        def fileName = "zq_${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
                         output.outputFile = new File(outputFile.parent, fileName)
                     }
                 }
@@ -83,12 +96,14 @@ repositories {
 
 dependencies {
     compile 'com.android.support:support-v4:20.+'
-//    compile project(':jumi')
-//    compile project(':wanpu')
-    compile project(':yimeng')
-//    compile project(':youmi')
+     //   compile project(':jumi')
+    //    compile project(':wanpu')
+    //    compile project(':yimeng')
+    compile project(':youmi')
     compile project(':common')
-//    compile project(':dyd')
-//    compile project(':xianguo')
+    //    compile project(':dyd')
+    //    compile project(':xianguo')
     compile files('libs/CoreLockGuard_0925.jar')
+    compile files('libs/umeng-analytics-v5.6.1.jar')
+    //compile 'com.umeng.analytics:analytics:latest.integration'
 }

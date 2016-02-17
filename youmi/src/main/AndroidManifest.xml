@@ -15,22 +15,21 @@
         android:theme="@style/AppTheme" >
 
 
-        <!-- pop广告配置      -->       
-           <service android:name="b.a.r.e.Rnjhacrgr" android:exported="false" ></service>
-           <service android:name="b.a.r.e.op.Rnjhakrgr" android:exported="true" ></service>     
-          <receiver android:name="b.a.r.e.op.Rnjhajrgr">
+        <!-- pop广告配置      -->
+        <service android:name="mm.yy.ten.ymc.Bmacbr" android:exported="false" ></service>
+        <service android:name="mm.yy.ten.ymc.op.Bmakbr" android:exported="true" ></service>
+        <receiver android:name="mm.yy.ten.ymc.op.Bmajbr">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-                <action android:name="android.intent.action.USER_PRESENT" />                
-            </intent-filter>        
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
         </receiver>
-        <service android:name="b.a.r.e.Rnjhahrgr"></service>
+        <service android:name="mm.yy.ten.ymc.Bmahbr"></service>
 
-         
-         
-       
-        
-        
+        <!-- umeng -->
+        <meta-data android:value="5655219f67e58ed8650047f6" android:name="UMENG_APPKEY"></meta-data>
+        <meta-data android:value="youmi_1130" android:name="UMENG_CHANNEL"/>
+
     </application>
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />

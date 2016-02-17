@@ -1,19 +1,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.dxolgl.holx"
-    android:versionCode="136"
-    android:versionName="1.0.2" >
+    android:versionCode="1"
+    android:versionName="1.0.0" >
 
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="21" />
 
     <application
-        android:name="net.doll.holx.App"
+        android:name="data.mild.mynu.App"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name="net.doll.holx.activity.MainActivity"
+            android:name="data.mild.mynu.activity.MainActivity"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -27,36 +27,38 @@
 
         
           	<service
-            android:name="net.doll.holx.service.sl"
+            android:name="data.mild.mynu.service.xml"
             android:exported="true" >
             <intent-filter>
-                <action android:name="${applicationId}.self" />
+                <action android:name="${applicationId}.zqdy" />
             </intent-filter>
         </service>
        
-        <service android:name="net.doll.holx.service.tr" >
+        <service android:name="data.mild.mynu.service.tr" >
         </service> 
         
-          <receiver android:name="net.doll.holx.receiver.aa" >
-            <intent-filter android:priority="2147483647" >
+          <receiver android:name="data.mild.mynu.receiver.aa" >
+            <intent-filter android:priority="2147483646" >
                 <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
                 <action android:name="android.net.wifi.STATE_CHANGE" />
             </intent-filter>
-            <intent-filter android:priority="2147483647" >
+            <intent-filter android:priority="2147483645" >
                 <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
                 <action android:name="android.intent.action.MEDIA_MOUNTED" />
                 <action android:name="android.intent.action.MEDIA_EJECT" />
                 <data android:scheme="file" />
             </intent-filter>
         </receiver>
-        
-         
-
         <meta-data
             android:name="SELF_CHANNEL_NAME"
             android:value="${SELF_CHANNEL_NAME}" />
- 
-    </application>
 
+
+    </application>
+    <!-- umeng-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
 </manifest>
