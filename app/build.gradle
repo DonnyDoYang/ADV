@@ -26,6 +26,13 @@ android {
         ad_vsoyoucoolpad_yim {
             applicationId "data.miylid.mynuvs"
         }
+
+        ad_Hello_world {
+            applicationId "data.mxx.myiiii"
+        }
+
+
+
     }
     productFlavors.all {
         flavor -> flavor.manifestPlaceholders = [SELF_CHANNEL_NAME: name]
