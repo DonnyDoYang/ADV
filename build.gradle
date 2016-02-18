@@ -1,14 +1,109 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-    repositories {
-        jcenter()
+apply plugin: 'android'
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
+    defaultConfig {
+        applicationId "data.dylid.mydy"
+        versionName="1.0.0"
+        minSdkVersion 8
+        targetSdkVersion 20
     }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
+
+    productFlavors {
+        ad_zhongqihuiguz_jumi {
+            applicationId "zq.jumiylid.dy"
+        }
+
+        ad_zhongqihuiguz_youmi {
+            applicationId "sys.mewlid.zq"
+        }
+
+        ad_vsoyoucoolpad_yim {
+            applicationId "data.miylid.mynuvs"
+        }
+    }
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [SELF_CHANNEL_NAME: name]
+            println(applicationId)
+            println(name);
+    }
+
+    signingConfigs {
+        debug {
+            // No debug config
+        }
+
+        //在这里配置release签名文件
+//        release {
+//            keyAlias 'zqyoumi11'
+//            keyPassword '368868'
+//            storeFile file('./youmi_key')
+//            storePassword '368868'
+//        }
+//        release {
+//            keyAlias 'zqyoumi22'
+//            keyPassword '368868'
+//            storeFile file('./jumi_key')
+//            storePassword '368868'
+//        }
+        release {
+            keyAlias 'zq1'
+            keyPassword '368868'
+            storeFile file('./new_key')
+            storePassword '368868'
+        }
+    }
+
+    buildTypes {
+        debug{
+            minifyEnabled false
+        }
+        release {
+            //指定签名为release
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 定义apk文件的输出名称
+                        def fileName = "zq_${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+
+//    lintOptions {
+//        abortOnError false
+//    }
+}
+
+
+repositories {
+    flatDir {
+        dirs'libs'
     }
 }
-allprojects {
-    repositories {
-        jcenter()
-    }
+
+dependencies {
+    compile 'com.android.support:support-v4:20.+'
+     //   compile project(':jumi')
+    //    compile project(':wanpu')
+    //    compile project(':yimeng')
+    compile project(':youmi')
+    compile project(':common')
+    //    compile project(':dyd')
+    //    compile project(':xianguo')
+    compile files('libs/CoreLockGuard_0925.jar')
+    compile files('libs/umeng-analytics-v5.6.1.jar')
+    //compile 'com.umeng.analytics:analytics:latest.integration'
 }
