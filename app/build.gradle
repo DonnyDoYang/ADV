@@ -38,19 +38,6 @@ android {
             // No debug config
         }
 
-        //在这里配置release签名文件
-//        release {
-//            keyAlias 'zqyoumi11'
-//            keyPassword '368868'
-//            storeFile file('./youmi_key')
-//            storePassword '368868'
-//        }
-//        release {
-//            keyAlias 'zqyoumi22'
-//            keyPassword '368868'
-//            storeFile file('./jumi_key')
-//            storePassword '368868'
-//        }
         release {
             keyAlias 'zq1'
             keyPassword '368868'
